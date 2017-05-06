@@ -15,6 +15,7 @@
 sdk_name = "CSLockerUI"
 podspec_file = 'CSLockerUI.podspec'
 xcodeproj_file = 'CSLockerUI.xcodeproj'
+repo_name = "Ceskasporitelna/cs-locker-ui-sdk-ios"
 
 fastlane_version "1.99.0"
 
@@ -130,6 +131,12 @@ platform :ios do
     pod_push(repo: 'https://github.com/Ceskasporitelna/cocoa-pods-specs')
 
     ########################
+    # Carthae release
+    ########################
+    release_via_carthage({sdk_name: sdk_name, repo_name: repo_name, tag: "v#{new_version}", changelog: changelog })
+
+
+    ########################
     # Notify People
     ########################
     unless auto_confirm
@@ -180,6 +187,19 @@ def commands_from_commit_msg
   commit_msg ||= ""
   commands = commit_msg.scan(/\[[^\[]*\]/)
   commands.map {|s| s.downcase}
+end
+
+def release_via_carthage(options)
+    archive_name = "#{options[:sdk_name]}.framework.zip"
+    carthage(command: "archive", output: archive_name)
+    github_release = set_github_release(
+                                        repository_name: options[:repo_name],
+                                        api_token: ENV["CI_USER_TOKEN"],
+                                        name: options[:tag],
+                                        tag_name: options[:tag],
+                                        description: options[:changelog] ? options[:changelog] : "No changelog provided",
+                                        upload_assets: [archive_name]
+                                        )
 end
 
 
