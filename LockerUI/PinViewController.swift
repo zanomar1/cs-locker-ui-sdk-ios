@@ -105,7 +105,7 @@ class PinViewController: LockerPasswordViewController
         self.numericPasswordLength = self.passwordLength!
         
     #if !TARGET_INTERFACE_BUILDER
-        self.selectionView.color = LockerUI.sharedInstance.lightColor
+        self.selectionView.color = LockerUI.internalSharedInstance.lightColor
     #endif
         
         // For UI tweaks. Don't remove, just comment ...
@@ -410,7 +410,7 @@ class PinViewController: LockerPasswordViewController
             key += "\(value)"
             
         case -2:
-            LockerUI.sharedInstance.swapCurrentUIHandOrientation()
+            LockerUI.internalSharedInstance.swapCurrentUIHandOrientation()
             self.respectCurrentUIHandOrientation()
             
         default: // delete or back button

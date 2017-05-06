@@ -151,7 +151,7 @@ public class LockerUI: NSObject, LockerUIApi
         return localized
     }
     
-    public class var sharedInstance: LockerUI {
+    public class var sharedInstance: LockerUIApi {
         if let instance = _sharedInstance{
             return instance
         }else{
@@ -161,6 +161,10 @@ public class LockerUI: NSObject, LockerUIApi
         }
     }
     fileprivate static var _sharedInstance : LockerUI?
+    
+    internal class var internalSharedInstance : LockerUI{
+        return sharedInstance as! LockerUI
+    }
     
     public var authFlowOptions: AuthFlowOptions {
         get {
@@ -250,7 +254,7 @@ public class LockerUI: NSObject, LockerUIApi
         switch self.locker.status.lockStatus {
         case .unregistered:
             if self.authFlowOptions.skipStatusScreen.rawValue <= SkipStatusScreen.whenNotRegistered.rawValue {
-                LockerUI.sharedInstance.unlockOrRegister( animated: animated, completion: { result in
+                LockerUI.internalSharedInstance.unlockOrRegister( animated: animated, completion: { result in
                     switch result {
                     case .failure( let error ):
                         if ( error is CSErrorBase && ( (error as! CSErrorBase).isServerError || error.code == HttpStatusCodeNotFound) ) {
@@ -303,7 +307,7 @@ public class LockerUI: NSObject, LockerUIApi
         case .locked:
             if self.authFlowOptions.skipStatusScreen.rawValue <= SkipStatusScreen.whenLocked.rawValue {
                 
-                LockerUI.sharedInstance.unlockOrRegister(animated: animated, completion: { result in
+                LockerUI.internalSharedInstance.unlockOrRegister(animated: animated, completion: { result in
                     switch result {
                     case .failure:
                         self.popToRootLockerUIControllerWithCompletion({

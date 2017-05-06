@@ -23,7 +23,7 @@ class WebViewController: LockerViewController {
     var isTestingJSCodeInjected = false
     
     override var shouldShowTitleLogo: Bool {
-        switch (LockerUI.sharedInstance.lockerUIOptions.showLogo) {
+        switch (LockerUI.internalSharedInstance.lockerUIOptions.showLogo) {
         case .always:
             return true
         case .exceptRegistration, .never:
@@ -71,7 +71,7 @@ class WebViewController: LockerViewController {
         
         if self.lockerViewOptions == LockerViewOptions.showNoButton.rawValue {
             let reloadButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action:#selector(WebViewController.makeUrlRequest))
-            reloadButton.tintColor = LockerUI.sharedInstance.mainColor
+            reloadButton.tintColor = LockerUI.internalSharedInstance.mainColor
             self.navigationItem.rightBarButtonItem = reloadButton
         }
         

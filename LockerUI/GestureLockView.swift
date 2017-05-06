@@ -230,7 +230,7 @@ class GesturePoint: UIView
                 pt.selectedColor      = self.selectedDotColor.cgColor
                 #if !TARGET_INTERFACE_BUILDER
                     pt.gradientStartColor     = UIColor.white.cgColor
-                    pt.gradientEndColor       = LockerUI.sharedInstance.lightColor.cgColor
+                    pt.gradientEndColor       = LockerUI.internalSharedInstance.lightColor.cgColor
 //                    pt.accessibilityLabel     = String( format: LockerUI.localized("fmt-gesture"), i % matrixSize + 1, j % matrixSize + 1 )
                     addSubview(pt)
                 #else

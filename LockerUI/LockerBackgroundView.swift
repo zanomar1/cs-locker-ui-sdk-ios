@@ -32,7 +32,7 @@ class LockerBackgroundView: UIImageView {
         super.init(coder: aDecoder)
         self.makeLayer()
         
-        if let background = LockerUI.sharedInstance.lockerUIOptions.backgroundImage {
+        if let background = LockerUI.internalSharedInstance.lockerUIOptions.backgroundImage {
             self.image = background
         }
     }

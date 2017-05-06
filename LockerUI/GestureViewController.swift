@@ -366,7 +366,7 @@ class GestureViewController: LockerPasswordViewController
     //--------------------------------------------------------------------------
     @IBAction func swapViewsAction(_ sender: PadButton)
     {
-        LockerUI.sharedInstance.swapCurrentUIHandOrientation()
+        LockerUI.internalSharedInstance.swapCurrentUIHandOrientation()
         self.respectCurrentUIHandOrientation()
     }
     

@@ -58,7 +58,7 @@ class LockerViewController: UIViewController
     }
     
     var shouldShowTitleLogo: Bool {
-        switch (LockerUI.sharedInstance.lockerUIOptions.showLogo) {
+        switch (LockerUI.internalSharedInstance.lockerUIOptions.showLogo) {
         case .always, .exceptRegistration:
             return true
         case .never:
@@ -82,7 +82,7 @@ class LockerViewController: UIViewController
     {
         super.viewDidLoad()
         
-        self.backgroundTint = LockerUI.sharedInstance.mainColor
+        self.backgroundTint = LockerUI.internalSharedInstance.mainColor
         
         if let tint = self.backgroundTint {
             self.backgroundBaseView.tint = tint
@@ -162,7 +162,7 @@ class LockerViewController: UIViewController
     {
         if let image = self.imageNamed(imageName) {
             
-            let color = LockerUI.sharedInstance.mainColor
+            let color = LockerUI.internalSharedInstance.mainColor
             let newImage = image.imageWithColor(color)
             button.frame = CGRect( x: 0, y: 0, width: newImage.size.width, height: newImage.size.height )
             
@@ -180,7 +180,7 @@ class LockerViewController: UIViewController
     {
         for button in [self.backButton, self.cancelButton] where button != nil {
             let oldImage = button?.image(for: UIControlState())
-            let color    = LockerUI.sharedInstance.mainColor
+            let color    = LockerUI.internalSharedInstance.mainColor
             let newImage = oldImage?.imageWithColor(color)
             button?.setImage(newImage, for: UIControlState())
         }
@@ -210,8 +210,8 @@ class LockerViewController: UIViewController
     //MARK: -
     func adjustUISettingsForDarkButton( _ button: UIButton )
     {
-        button.setBackgroundColor(LockerUI.sharedInstance.darkColor, forUIControlState: UIControlState())
-        button.setBackgroundColor(LockerUI.sharedInstance.darkColor.colorWithHSB(0, saturation: 0, brightness: -11/255), forUIControlState: .highlighted)
+        button.setBackgroundColor(LockerUI.internalSharedInstance.darkColor, forUIControlState: UIControlState())
+        button.setBackgroundColor(LockerUI.internalSharedInstance.darkColor.colorWithHSB(0, saturation: 0, brightness: -11/255), forUIControlState: .highlighted)
         button.setTitleColor(UIColor.white, for: UIControlState())
         button.setTitleColor(UIColor(white: 0.8, alpha: 1), for: .highlighted)
         button.layer.cornerRadius = 5.0
@@ -220,9 +220,9 @@ class LockerViewController: UIViewController
     
     func adjustUISettingsForWhiteButton( _ button: ShadowButton )
     {
-        button.setTitleColor(LockerUI.sharedInstance.mainColor, for: UIControlState())
+        button.setTitleColor(LockerUI.internalSharedInstance.mainColor, for: UIControlState())
         button.buttonColor = UIColor.white
-        button.shadowColor = LockerUI.sharedInstance.lightColor
+        button.shadowColor = LockerUI.internalSharedInstance.lightColor
     }
     
     func adjustUISettingsForRedButton( _ button: ShadowButton )
