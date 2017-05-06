@@ -11,15 +11,15 @@
 
 # Requirements
 - iOS 8.1+
-- Xcode 7.3+
+- Xcode 8.3+
 
 # LockerUI Installation
-**IMPORTANT!** You need to have your SSH keys registered with the GitHub since this repository is private.
 
 ## Install through Carthage
 If you use [Carthage](https://github.com/Carthage/Carthage) you can add a dependency on CSLockerUI by adding it to your Cartfile:
+
 ```
-git 'git@github.com:Ceskasporitelna/cs-locker-ui-sdk-ios.git'
+github 'Ceskasporitelna/cs-locker-ui-sdk-ios'
 ```
 
 ## Install through CocoaPods
@@ -38,6 +38,7 @@ pod 'CSLockerUI'
 # Usage
 
 After you've installed the SDK using Carthage or CocoaPods You can simply import the module wherever you wish to use it:
+
 ```swift
 import CSLockerUI
 ```
