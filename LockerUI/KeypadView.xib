@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeypadView" customModule="CSLockerUI" customModuleProvider="target">
+            <connections>
+                <outlet property="button1LeadingConstraint" destination="nQ6-hS-i6O" id="5au-zC-gsx"/>
+                <outlet property="button1TopConstraint" destination="0e9-gs-A4X" id="69C-i7-baM"/>
+                <outlet property="deleteButton" destination="3jw-Dl-yhv" id="PzU-P6-5bK"/>
+                <outlet property="padHeightConstraint" destination="jgP-xa-T7g" id="nNg-HQ-wwO"/>
+                <outlet property="padLeadingConstraint" destination="wyJ-vj-oCz" id="jkU-Ea-QfH"/>
+                <outlet property="padTopConstraint" destination="XCN-hU-Zfi" id="bTo-Aa-3YN"/>
+                <outlet property="padView" destination="iN0-l3-epB" id="jjO-O0-2q5"/>
+                <outlet property="padWidthConstraint" destination="gSx-JJ-u8Y" id="mHL-ss-GKu"/>
+                <outlet property="swapViewButton" destination="orG-Jy-lhM" id="VdO-EV-Cm0"/>
+                <outletCollection property="buttons" destination="Ype-UZ-hGk" collectionClass="NSMutableArray" id="IOn-rd-46W"/>
+                <outletCollection property="buttons" destination="4x8-PR-LQu" collectionClass="NSMutableArray" id="9hW-75-TrR"/>
+                <outletCollection property="verticalGapConstraints" destination="0HN-ZG-dsl" collectionClass="NSMutableArray" id="Bf4-gK-wht"/>
+                <outletCollection property="buttons" destination="HrV-Ej-W17" collectionClass="NSMutableArray" id="Js8-hD-QGc"/>
+                <outletCollection property="horizontalGapConstraints" destination="y1s-v0-fzT" collectionClass="NSMutableArray" id="Uk0-ON-DxE"/>
+                <outletCollection property="buttons" destination="Dks-Z9-UiJ" collectionClass="NSMutableArray" id="ZH7-RA-z1N"/>
+                <outletCollection property="buttons" destination="KNf-b2-2KZ" collectionClass="NSMutableArray" id="Fmr-ki-PNK"/>
+                <outletCollection property="buttons" destination="10W-SD-jcx" collectionClass="NSMutableArray" id="03Z-l8-4Eb"/>
+                <outletCollection property="verticalGapConstraints" destination="vd7-od-Lq6" collectionClass="NSMutableArray" id="n0L-au-Ngw"/>
+                <outletCollection property="buttons" destination="H6O-3U-ezh" collectionClass="NSMutableArray" id="s4s-4I-xpz"/>
+                <outletCollection property="verticalGapConstraints" destination="bWs-V2-jRv" collectionClass="NSMutableArray" id="r3K-aI-Ow9"/>
+                <outletCollection property="horizontalGapConstraints" destination="y8v-bA-AFJ" collectionClass="NSMutableArray" id="d1H-lQ-Lto"/>
+                <outletCollection property="buttons" destination="3jw-Dl-yhv" collectionClass="NSMutableArray" id="dQD-6G-Fsq"/>
+                <outletCollection property="buttons" destination="Q4C-NZ-OvJ" collectionClass="NSMutableArray" id="Obu-GU-nHi"/>
+                <outletCollection property="buttons" destination="J2F-us-gyh" collectionClass="NSMutableArray" id="ta2-Y2-CT6"/>
+                <outletCollection property="buttons" destination="Qcm-2N-KRU" collectionClass="NSMutableArray" id="uNR-A1-IhT"/>
+                <outletCollection property="buttons" destination="orG-Jy-lhM" collectionClass="NSMutableArray" id="HyW-eP-moG"/>
+                <outletCollection property="buttons" destination="iN0-l3-epB" collectionClass="NSMutableArray" id="2t0-Rx-F1n"/>
+            </connections>
+        </placeholder>
+        <view contentMode="scaleToFill" id="o5p-C8-fDC" userLabel="Base View">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="310"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" userLabel="Keypad View">
+                    <rect key="frame" x="0.0" y="0.0" width="260" height="310"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dks-Z9-UiJ" userLabel="Button0" customClass="NumberPadButtonZero" customModule="CSLockerUI">
+                            <rect key="frame" x="95" y="241" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Ycd-Zu-cl8"/>
+                                <constraint firstAttribute="width" constant="60" id="Zi7-cC-vX9"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="bRK-Fi-2eX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jw-Dl-yhv" customClass="TextPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="180" y="241" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="6RT-d3-afl"/>
+                                <constraint firstAttribute="height" constant="60" id="tL4-tS-BUZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Delete">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="SMAZAT"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                    <color key="value" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="1uI-cV-JrK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrV-Ej-W17" userLabel="Button1" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="10" y="10" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="1Qi-ds-7Z8"/>
+                                <constraint firstAttribute="width" constant="60" id="bVG-l4-uO3"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="GQT-Mf-tiN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcm-2N-KRU" userLabel="Button2" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="95" y="10" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Kyr-58-j9w"/>
+                                <constraint firstAttribute="width" constant="60" id="RP9-pH-AoI"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="letters" value="ABC"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="j9J-Um-aZM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ype-UZ-hGk" userLabel="Button3" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="180" y="10" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="cuF-Hy-Ljc"/>
+                                <constraint firstAttribute="width" constant="60" id="w2W-oP-Xwb"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="letters" value="DEF"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="EkL-o2-qFI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-PR-LQu" userLabel="Button4" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="10" y="87" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="4"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="2aW-vg-sKJ"/>
+                                <constraint firstAttribute="width" constant="60" id="HIi-pa-VQr"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="letters" value="GHI"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="4eb-DX-qMP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2F-us-gyh" userLabel="Button5" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="95" y="87" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="7gE-x5-yIx"/>
+                                <constraint firstAttribute="height" constant="60" id="n1h-S7-t4i"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="letters" value="JKL"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="oy9-aV-KHD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-NZ-OvJ" userLabel="Button6" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="180" y="87" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="6"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="fsX-5Y-62j"/>
+                                <constraint firstAttribute="height" constant="60" id="obR-VQ-AQB"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="letters" value="MNO"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="0Qr-WO-e11"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10W-SD-jcx" userLabel="Button7" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="10" y="164" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="7"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="Rzd-N6-zRm"/>
+                                <constraint firstAttribute="height" constant="60" id="g4z-eR-b3A"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="letters" value="PQRS"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="S5P-o2-ufB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6O-3U-ezh" userLabel="Button8" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="95" y="164" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="8"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="Aml-k5-RRj"/>
+                                <constraint firstAttribute="height" constant="60" id="MxB-6U-uV3"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="letters" value="TUV"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="3qf-ey-lUV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNf-b2-2KZ" userLabel="Button9" customClass="NumberPadButton" customModule="CSLockerUI">
+                            <rect key="frame" x="180" y="164" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="9"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="4qe-YR-fyl"/>
+                                <constraint firstAttribute="width" constant="60" id="gpr-ON-ZWZ"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="number">
+                                    <integer key="value" value="9"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="letters" value="WXYZ"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="5sN-Ba-KPy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="-2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orG-Jy-lhM" userLabel="Swap Views Button" customClass="SwapViewsButton" customModule="CSLockerUI">
+                            <rect key="frame" x="10" y="241" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="0.14679747139999999" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration" label="Exchange"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="D4b-S8-3wc"/>
+                                <constraint firstAttribute="width" constant="60" id="E0g-Kt-TP9"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="Lbv-xk-nSo"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1333333333" green="0.35294117650000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="10W-SD-jcx" firstAttribute="top" secondItem="4x8-PR-LQu" secondAttribute="bottom" constant="17" id="0HN-ZG-dsl"/>
+                        <constraint firstItem="HrV-Ej-W17" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="0e9-gs-A4X"/>
+                        <constraint firstItem="3jw-Dl-yhv" firstAttribute="centerX" secondItem="KNf-b2-2KZ" secondAttribute="centerX" id="15G-23-OtK"/>
+                        <constraint firstItem="KNf-b2-2KZ" firstAttribute="centerY" secondItem="H6O-3U-ezh" secondAttribute="centerY" id="4KN-fJ-DFx"/>
+                        <constraint firstItem="H6O-3U-ezh" firstAttribute="centerY" secondItem="10W-SD-jcx" secondAttribute="centerY" id="ALe-pc-zQg"/>
+                        <constraint firstItem="3jw-Dl-yhv" firstAttribute="centerY" secondItem="Dks-Z9-UiJ" secondAttribute="centerY" id="D0L-bb-zXL"/>
+                        <constraint firstItem="J2F-us-gyh" firstAttribute="centerY" secondItem="4x8-PR-LQu" secondAttribute="centerY" id="FrV-wG-Vdb"/>
+                        <constraint firstItem="Dks-Z9-UiJ" firstAttribute="centerX" secondItem="H6O-3U-ezh" secondAttribute="centerX" id="IfI-tx-bot"/>
+                        <constraint firstItem="Qcm-2N-KRU" firstAttribute="centerY" secondItem="HrV-Ej-W17" secondAttribute="centerY" id="OpF-IP-lLQ"/>
+                        <constraint firstItem="J2F-us-gyh" firstAttribute="centerX" secondItem="Qcm-2N-KRU" secondAttribute="centerX" id="Xyq-kd-WIi"/>
+                        <constraint firstItem="KNf-b2-2KZ" firstAttribute="centerX" secondItem="Q4C-NZ-OvJ" secondAttribute="centerX" id="ZeZ-eB-GO8"/>
+                        <constraint firstItem="orG-Jy-lhM" firstAttribute="top" secondItem="10W-SD-jcx" secondAttribute="bottom" constant="17" id="bWs-V2-jRv"/>
+                        <constraint firstAttribute="width" constant="260" id="gSx-JJ-u8Y"/>
+                        <constraint firstItem="Dks-Z9-UiJ" firstAttribute="centerY" secondItem="orG-Jy-lhM" secondAttribute="centerY" id="h0e-AY-Mwe"/>
+                        <constraint firstItem="Ype-UZ-hGk" firstAttribute="centerY" secondItem="HrV-Ej-W17" secondAttribute="centerY" id="iW1-SF-MlK"/>
+                        <constraint firstItem="4x8-PR-LQu" firstAttribute="centerX" secondItem="HrV-Ej-W17" secondAttribute="centerX" id="icQ-Re-7c6"/>
+                        <constraint firstItem="Q4C-NZ-OvJ" firstAttribute="centerY" secondItem="J2F-us-gyh" secondAttribute="centerY" id="iji-W2-V9c"/>
+                        <constraint firstItem="Q4C-NZ-OvJ" firstAttribute="centerX" secondItem="Ype-UZ-hGk" secondAttribute="centerX" id="jYi-rc-P2H"/>
+                        <constraint firstItem="orG-Jy-lhM" firstAttribute="centerX" secondItem="10W-SD-jcx" secondAttribute="centerX" id="jfB-CG-voc"/>
+                        <constraint firstAttribute="height" constant="310" id="jgP-xa-T7g"/>
+                        <constraint firstItem="10W-SD-jcx" firstAttribute="centerX" secondItem="4x8-PR-LQu" secondAttribute="centerX" id="ldG-k5-cdI"/>
+                        <constraint firstItem="HrV-Ej-W17" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="nQ6-hS-i6O"/>
+                        <constraint firstItem="H6O-3U-ezh" firstAttribute="centerX" secondItem="J2F-us-gyh" secondAttribute="centerX" id="pbK-G4-Qwf"/>
+                        <constraint firstItem="4x8-PR-LQu" firstAttribute="top" secondItem="HrV-Ej-W17" secondAttribute="bottom" constant="17" id="vd7-od-Lq6"/>
+                        <constraint firstItem="Ype-UZ-hGk" firstAttribute="leading" secondItem="Qcm-2N-KRU" secondAttribute="trailing" constant="25" id="y1s-v0-fzT"/>
+                        <constraint firstItem="Qcm-2N-KRU" firstAttribute="leading" secondItem="HrV-Ej-W17" secondAttribute="trailing" constant="25" id="y8v-bA-AFJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="o5p-C8-fDC" secondAttribute="top" id="XCN-hU-Zfi"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="o5p-C8-fDC" secondAttribute="leading" id="wyJ-vj-oCz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="209" y="465"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+</document>

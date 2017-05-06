@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		015D90BE1C1047EC00DB4A46 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015D90BD1C1047EC00DB4A46 /* ShadowButton.swift */; };
+		01CD71FD1C084D63006EFA02 /* NumberPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD71FC1C084D63006EFA02 /* NumberPadButton.swift */; };
+		01CD71FF1C085713006EFA02 /* NumberPadButtonZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD71FE1C085713006EFA02 /* NumberPadButtonZero.swift */; };
+		01CD72011C0858DB006EFA02 /* TextPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CD72001C0858DB006EFA02 /* TextPadButton.swift */; };
+		01FB1C6D1C0DC55D00B74C0C /* LockerBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB1C6C1C0DC55D00B74C0C /* LockerBackgroundView.swift */; };
+		190BDFD61C0F739700A12A58 /* LockerUIBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190BDFD51C0F739700A12A58 /* LockerUIBaseViewController.swift */; };
+		191410031C08587B002D4D69 /* LockerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191410021C08587B002D4D69 /* LockerImageView.swift */; };
+		192265241C074742002BB95C /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192265231C074742002BB95C /* StatusViewController.swift */; };
+		195BE22A1C05F08E00E1D812 /* LockerUI.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195BE2291C05F08E00E1D812 /* LockerUI.xcassets */; };
+		1977DC6A1D425155009784F0 /* SwapViewsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977DC691D425155009784F0 /* SwapViewsButton.swift */; };
+		1987EAE01BF9BF5C00DEDFC8 /* LockerUI+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987EADF1BF9BF5C00DEDFC8 /* LockerUI+Data.swift */; };
+		1988FBB21C933EF3008A199A /* RepeatLoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988FBB11C933EF3008A199A /* RepeatLoginOrRegisterViewController.swift */; };
+		19B3A7691BF70A3B001D2A76 /* LockerUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 19B3A7681BF70A3B001D2A76 /* LockerUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19B3A7811BF72BE8001D2A76 /* FingerprintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7731BF72BE8001D2A76 /* FingerprintViewController.swift */; };
+		19B3A7821BF72BE8001D2A76 /* GestureLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7741BF72BE8001D2A76 /* GestureLockView.swift */; };
+		19B3A7831BF72BE8001D2A76 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7751BF72BE8001D2A76 /* GestureViewController.swift */; };
+		19B3A7841BF72BE8001D2A76 /* InputTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7761BF72BE8001D2A76 /* InputTypeViewController.swift */; };
+		19B3A7871BF72BE8001D2A76 /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7791BF72BE8001D2A76 /* KeypadView.swift */; };
+		19B3A7881BF72BE8001D2A76 /* KeypadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B3A77A1BF72BE8001D2A76 /* KeypadView.xib */; };
+		19B3A7891BF72BE8001D2A76 /* Locker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B3A77B1BF72BE8001D2A76 /* Locker.storyboard */; };
+		19B3A78A1BF72BE8001D2A76 /* LockerUI+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A77C1BF72BE8001D2A76 /* LockerUI+UI.swift */; };
+		19B3A78B1BF72BE8001D2A76 /* PadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A77D1BF72BE8001D2A76 /* PadButton.swift */; };
+		19B3A78C1BF72BE8001D2A76 /* PadSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A77E1BF72BE8001D2A76 /* PadSelectionView.swift */; };
+		19B3A78D1BF72BE8001D2A76 /* SolidColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A77F1BF72BE8001D2A76 /* SolidColorButton.swift */; };
+		19B3A78E1BF72BE8001D2A76 /* WaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7801BF72BE8001D2A76 /* WaitViewController.swift */; };
+		19B3A7901BF72C1C001D2A76 /* RoundedButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B3A78F1BF72C1C001D2A76 /* RoundedButtonView.xib */; };
+		19B3A7941BF72C45001D2A76 /* LockerPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7911BF72C45001D2A76 /* LockerPasswordViewController.swift */; };
+		19B3A7951BF72C45001D2A76 /* LockerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7921BF72C45001D2A76 /* LockerViewController.swift */; };
+		19B3A7961BF72C45001D2A76 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7931BF72C45001D2A76 /* PinViewController.swift */; };
+		19B3A7991BF72C76001D2A76 /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7971BF72C76001D2A76 /* RoundedButtonView.swift */; };
+		19B3A79A1BF72C76001D2A76 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7981BF72C76001D2A76 /* UIUtils.swift */; };
+		19B3A79C1BF72CB9001D2A76 /* LockerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A79B1BF72CB9001D2A76 /* LockerUI.swift */; };
+		19B3A7A01BF72E2E001D2A76 /* LockerUI+UnlockOrRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A79F1BF72E2E001D2A76 /* LockerUI+UnlockOrRegister.swift */; };
+		19B3A7A21BF7329F001D2A76 /* LockerUI+ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3A7A11BF7329F001D2A76 /* LockerUI+ChangePassword.swift */; };
+		19B3A7AA1BF76E98001D2A76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19B3A7AC1BF76E98001D2A76 /* Localizable.strings */; };
+		19B7A7CB1C0890C300C949D6 /* DisplayInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B7A7CA1C0890C300C949D6 /* DisplayInfoViewController.swift */; };
+		19C3FBE41C0648FC0013A3DC /* LockerUIApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C3FBE31C0648FC0013A3DC /* LockerUIApi.swift */; };
+		19D6D6011DA2AAD600A653E2 /* CSCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D6D6001DA2AAD600A653E2 /* CSCoreSDK.framework */; };
+		502BB1A21C4CF3BA00EFA324 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BB1A11C4CF3BA00EFA324 /* WebViewController.swift */; };
+		506DB08C1CBBA3DE00B45430 /* WebSessionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB08B1CBBA3DE00B45430 /* WebSessionTimer.swift */; };
+		5073CF911C806F7B007A0FCD /* LockerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073CF901C806F7B007A0FCD /* LockerNavigationController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		015D90BD1C1047EC00DB4A46 /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
+		01CD71FC1C084D63006EFA02 /* NumberPadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPadButton.swift; sourceTree = "<group>"; };
+		01CD71FE1C085713006EFA02 /* NumberPadButtonZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPadButtonZero.swift; sourceTree = "<group>"; };
+		01CD72001C0858DB006EFA02 /* TextPadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPadButton.swift; sourceTree = "<group>"; };
+		01FB1C6C1C0DC55D00B74C0C /* LockerBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerBackgroundView.swift; sourceTree = "<group>"; };
+		190BDFD51C0F739700A12A58 /* LockerUIBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerUIBaseViewController.swift; sourceTree = "<group>"; };
+		191410021C08587B002D4D69 /* LockerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerImageView.swift; sourceTree = "<group>"; };
+		192265231C074742002BB95C /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		195BE2291C05F08E00E1D812 /* LockerUI.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LockerUI.xcassets; sourceTree = "<group>"; };
+		1977DC691D425155009784F0 /* SwapViewsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwapViewsButton.swift; sourceTree = "<group>"; };
+		1987EADF1BF9BF5C00DEDFC8 /* LockerUI+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LockerUI+Data.swift"; sourceTree = "<group>"; };
+		1988FBB11C933EF3008A199A /* RepeatLoginOrRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatLoginOrRegisterViewController.swift; sourceTree = "<group>"; };
+		19B3A7661BF70A3B001D2A76 /* CSLockerUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSLockerUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B3A7681BF70A3B001D2A76 /* LockerUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockerUI.h; sourceTree = "<group>"; };
+		19B3A76A1BF70A3B001D2A76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B3A7731BF72BE8001D2A76 /* FingerprintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintViewController.swift; sourceTree = "<group>"; };
+		19B3A7741BF72BE8001D2A76 /* GestureLockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureLockView.swift; sourceTree = "<group>"; };
+		19B3A7751BF72BE8001D2A76 /* GestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
+		19B3A7761BF72BE8001D2A76 /* InputTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTypeViewController.swift; sourceTree = "<group>"; };
+		19B3A7791BF72BE8001D2A76 /* KeypadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
+		19B3A77A1BF72BE8001D2A76 /* KeypadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeypadView.xib; sourceTree = "<group>"; };
+		19B3A77B1BF72BE8001D2A76 /* Locker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Locker.storyboard; sourceTree = "<group>"; };
+		19B3A77C1BF72BE8001D2A76 /* LockerUI+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LockerUI+UI.swift"; sourceTree = "<group>"; };
+		19B3A77D1BF72BE8001D2A76 /* PadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PadButton.swift; sourceTree = "<group>"; };
+		19B3A77E1BF72BE8001D2A76 /* PadSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PadSelectionView.swift; sourceTree = "<group>"; };
+		19B3A77F1BF72BE8001D2A76 /* SolidColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidColorButton.swift; sourceTree = "<group>"; };
+		19B3A7801BF72BE8001D2A76 /* WaitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
+		19B3A78F1BF72C1C001D2A76 /* RoundedButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoundedButtonView.xib; sourceTree = "<group>"; };
+		19B3A7911BF72C45001D2A76 /* LockerPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerPasswordViewController.swift; sourceTree = "<group>"; };
+		19B3A7921BF72C45001D2A76 /* LockerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerViewController.swift; sourceTree = "<group>"; };
+		19B3A7931BF72C45001D2A76 /* PinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
+		19B3A7971BF72C76001D2A76 /* RoundedButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
+		19B3A7981BF72C76001D2A76 /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		19B3A79B1BF72CB9001D2A76 /* LockerUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerUI.swift; sourceTree = "<group>"; };
+		19B3A79F1BF72E2E001D2A76 /* LockerUI+UnlockOrRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LockerUI+UnlockOrRegister.swift"; sourceTree = "<group>"; };
+		19B3A7A11BF7329F001D2A76 /* LockerUI+ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LockerUI+ChangePassword.swift"; sourceTree = "<group>"; };
+		19B3A7AD1BF76EA2001D2A76 /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19B7A7CA1C0890C300C949D6 /* DisplayInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInfoViewController.swift; sourceTree = "<group>"; };
+		19C3FBE31C0648FC0013A3DC /* LockerUIApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerUIApi.swift; sourceTree = "<group>"; };
+		19D6D6001DA2AAD600A653E2 /* CSCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSCoreSDK.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/CSSDKTestApp-entqqgucjppvkjfhicckuuugvxly/Build/Products/Debug-iphonesimulator/CSCoreSDK.framework"; sourceTree = "<group>"; };
+		19EAC3D31D073E6C00DE0A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2680D3D51C0B33FB00113458 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../cs-locker-ui-sdk-ios/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
+		2680D3D61C0B33FB00113458 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = "../cs-locker-ui-sdk-ios/Carthage/Build/iOS/KeychainAccess.framework"; sourceTree = "<group>"; };
+		2680D3D71C0B33FB00113458 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "../cs-locker-ui-sdk-ios/Carthage/Build/iOS/ObjectMapper.framework"; sourceTree = "<group>"; };
+		268D09411C0B5ADF0095B93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		268D09431C0B5AEC0095B93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		268D09451C0B6B940095B93C /* CoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSDK.framework; path = "../csas-sdk-demo-ios/Carthage/Build/iOS/CoreSDK.framework"; sourceTree = "<group>"; };
+		268F81281D9C250B00B73E2E /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
+		26AC5A141D07FF30006B95EC /* CSLockerUI.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSLockerUI.podspec; sourceTree = "<group>"; };
+		26BC07A71C3FEE110025ED81 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		26C800281D22D7F000829A54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		26D1BDA91C0BD05E007EF500 /* CSCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSCoreSDK.framework; path = Carthage/Build/iOS/CSCoreSDK.framework; sourceTree = "<group>"; };
+		26DB60F81C1732F2004C4B21 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = SOURCE_ROOT; };
+		502BB1A11C4CF3BA00EFA324 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		506DB08B1CBBA3DE00B45430 /* WebSessionTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSessionTimer.swift; sourceTree = "<group>"; };
+		5073CF901C806F7B007A0FCD /* LockerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerNavigationController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19B3A7621BF70A3B001D2A76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D6D6011DA2AAD600A653E2 /* CSCoreSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1967AAF81BDBD849000CA66C = {
+			isa = PBXGroup;
+			children = (
+				26DB60F81C1732F2004C4B21 /* CHANGELOG.md */,
+				26AC5A141D07FF30006B95EC /* CSLockerUI.podspec */,
+				268F81281D9C250B00B73E2E /* Fastfile */,
+				26BC07A71C3FEE110025ED81 /* Cartfile */,
+				26C800281D22D7F000829A54 /* README.md */,
+				19B3A7671BF70A3B001D2A76 /* LockerUI */,
+				1967AB021BDBD849000CA66C /* Products */,
+				4F3B15095CC6318289FF63FA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1967AB021BDBD849000CA66C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B3A7661BF70A3B001D2A76 /* CSLockerUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1977DC6B1D425362009784F0 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				19B3A7971BF72C76001D2A76 /* RoundedButtonView.swift */,
+				19B3A78F1BF72C1C001D2A76 /* RoundedButtonView.xib */,
+				19B3A77F1BF72BE8001D2A76 /* SolidColorButton.swift */,
+				01CD72001C0858DB006EFA02 /* TextPadButton.swift */,
+				015D90BD1C1047EC00DB4A46 /* ShadowButton.swift */,
+				01CD71FC1C084D63006EFA02 /* NumberPadButton.swift */,
+				01CD71FE1C085713006EFA02 /* NumberPadButtonZero.swift */,
+				19B3A77D1BF72BE8001D2A76 /* PadButton.swift */,
+				1977DC691D425155009784F0 /* SwapViewsButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		19B3A7671BF70A3B001D2A76 /* LockerUI */ = {
+			isa = PBXGroup;
+			children = (
+				19B3A79E1BF72DE4001D2A76 /* LockerUI */,
+				19B3A7721BF720D1001D2A76 /* UI */,
+				506DB08A1CBBA37800B45430 /* Utility */,
+				19B3A7681BF70A3B001D2A76 /* LockerUI.h */,
+				19C3FBE31C0648FC0013A3DC /* LockerUIApi.swift */,
+				19B3A76A1BF70A3B001D2A76 /* Info.plist */,
+				19B3A7AC1BF76E98001D2A76 /* Localizable.strings */,
+				195BE2291C05F08E00E1D812 /* LockerUI.xcassets */,
+			);
+			path = LockerUI;
+			sourceTree = "<group>";
+		};
+		19B3A7721BF720D1001D2A76 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1977DC6B1D425362009784F0 /* Buttons */,
+				19B7A7CA1C0890C300C949D6 /* DisplayInfoViewController.swift */,
+				19B3A7731BF72BE8001D2A76 /* FingerprintViewController.swift */,
+				19B3A7741BF72BE8001D2A76 /* GestureLockView.swift */,
+				19B3A7751BF72BE8001D2A76 /* GestureViewController.swift */,
+				19B3A7761BF72BE8001D2A76 /* InputTypeViewController.swift */,
+				19B3A7791BF72BE8001D2A76 /* KeypadView.swift */,
+				19B3A77A1BF72BE8001D2A76 /* KeypadView.xib */,
+				19B3A77B1BF72BE8001D2A76 /* Locker.storyboard */,
+				01FB1C6C1C0DC55D00B74C0C /* LockerBackgroundView.swift */,
+				191410021C08587B002D4D69 /* LockerImageView.swift */,
+				5073CF901C806F7B007A0FCD /* LockerNavigationController.swift */,
+				19B3A7911BF72C45001D2A76 /* LockerPasswordViewController.swift */,
+				190BDFD51C0F739700A12A58 /* LockerUIBaseViewController.swift */,
+				19B3A7921BF72C45001D2A76 /* LockerViewController.swift */,
+				19B3A77E1BF72BE8001D2A76 /* PadSelectionView.swift */,
+				19B3A7931BF72C45001D2A76 /* PinViewController.swift */,
+				1988FBB11C933EF3008A199A /* RepeatLoginOrRegisterViewController.swift */,
+				192265231C074742002BB95C /* StatusViewController.swift */,
+				19B3A7801BF72BE8001D2A76 /* WaitViewController.swift */,
+				502BB1A11C4CF3BA00EFA324 /* WebViewController.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		19B3A79E1BF72DE4001D2A76 /* LockerUI */ = {
+			isa = PBXGroup;
+			children = (
+				19B3A79B1BF72CB9001D2A76 /* LockerUI.swift */,
+				19B3A7A11BF7329F001D2A76 /* LockerUI+ChangePassword.swift */,
+				1987EADF1BF9BF5C00DEDFC8 /* LockerUI+Data.swift */,
+				19B3A79F1BF72E2E001D2A76 /* LockerUI+UnlockOrRegister.swift */,
+				19B3A77C1BF72BE8001D2A76 /* LockerUI+UI.swift */,
+			);
+			name = LockerUI;
+			sourceTree = "<group>";
+		};
+		4F3B15095CC6318289FF63FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19D6D6001DA2AAD600A653E2 /* CSCoreSDK.framework */,
+				26D1BDA91C0BD05E007EF500 /* CSCoreSDK.framework */,
+				268D09451C0B6B940095B93C /* CoreSDK.framework */,
+				268D09431C0B5AEC0095B93C /* UIKit.framework */,
+				268D09411C0B5ADF0095B93C /* Foundation.framework */,
+				2680D3D51C0B33FB00113458 /* Alamofire.framework */,
+				2680D3D61C0B33FB00113458 /* KeychainAccess.framework */,
+				2680D3D71C0B33FB00113458 /* ObjectMapper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		506DB08A1CBBA37800B45430 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				19B3A7981BF72C76001D2A76 /* UIUtils.swift */,
+				506DB08B1CBBA3DE00B45430 /* WebSessionTimer.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		19B3A7631BF70A3B001D2A76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B3A7691BF70A3B001D2A76 /* LockerUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		19B3A7651BF70A3B001D2A76 /* CSLockerUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B3A7711BF70A3C001D2A76 /* Build configuration list for PBXNativeTarget "CSLockerUI" */;
+			buildPhases = (
+				19B3A7611BF70A3B001D2A76 /* Sources */,
+				19B3A7621BF70A3B001D2A76 /* Frameworks */,
+				19B3A7631BF70A3B001D2A76 /* Headers */,
+				19B3A7641BF70A3B001D2A76 /* Resources */,
+				26F8263C1C0C895A00B89220 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSLockerUI;
+			productName = LockerUI;
+			productReference = 19B3A7661BF70A3B001D2A76 /* CSLockerUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1967AAF91BDBD849000CA66C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Applifting;
+				TargetAttributes = {
+					19B3A7651BF70A3B001D2A76 = {
+						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 1967AAFC1BDBD849000CA66C /* Build configuration list for PBXProject "CSLockerUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				cs,
+			);
+			mainGroup = 1967AAF81BDBD849000CA66C;
+			productRefGroup = 1967AB021BDBD849000CA66C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19B3A7651BF70A3B001D2A76 /* CSLockerUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19B3A7641BF70A3B001D2A76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B3A7AA1BF76E98001D2A76 /* Localizable.strings in Resources */,
+				19B3A7881BF72BE8001D2A76 /* KeypadView.xib in Resources */,
+				19B3A7901BF72C1C001D2A76 /* RoundedButtonView.xib in Resources */,
+				19B3A7891BF72BE8001D2A76 /* Locker.storyboard in Resources */,
+				195BE22A1C05F08E00E1D812 /* LockerUI.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26F8263C1C0C895A00B89220 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19B3A7611BF70A3B001D2A76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B3A78A1BF72BE8001D2A76 /* LockerUI+UI.swift in Sources */,
+				015D90BE1C1047EC00DB4A46 /* ShadowButton.swift in Sources */,
+				5073CF911C806F7B007A0FCD /* LockerNavigationController.swift in Sources */,
+				1988FBB21C933EF3008A199A /* RepeatLoginOrRegisterViewController.swift in Sources */,
+				19B3A78C1BF72BE8001D2A76 /* PadSelectionView.swift in Sources */,
+				19B3A7961BF72C45001D2A76 /* PinViewController.swift in Sources */,
+				19B3A7991BF72C76001D2A76 /* RoundedButtonView.swift in Sources */,
+				01CD72011C0858DB006EFA02 /* TextPadButton.swift in Sources */,
+				01CD71FF1C085713006EFA02 /* NumberPadButtonZero.swift in Sources */,
+				19B3A7831BF72BE8001D2A76 /* GestureViewController.swift in Sources */,
+				19B3A7951BF72C45001D2A76 /* LockerViewController.swift in Sources */,
+				190BDFD61C0F739700A12A58 /* LockerUIBaseViewController.swift in Sources */,
+				19B3A7941BF72C45001D2A76 /* LockerPasswordViewController.swift in Sources */,
+				506DB08C1CBBA3DE00B45430 /* WebSessionTimer.swift in Sources */,
+				19B3A79A1BF72C76001D2A76 /* UIUtils.swift in Sources */,
+				19B3A7841BF72BE8001D2A76 /* InputTypeViewController.swift in Sources */,
+				502BB1A21C4CF3BA00EFA324 /* WebViewController.swift in Sources */,
+				19C3FBE41C0648FC0013A3DC /* LockerUIApi.swift in Sources */,
+				19B3A78B1BF72BE8001D2A76 /* PadButton.swift in Sources */,
+				1987EAE01BF9BF5C00DEDFC8 /* LockerUI+Data.swift in Sources */,
+				19B3A78D1BF72BE8001D2A76 /* SolidColorButton.swift in Sources */,
+				19B3A7A21BF7329F001D2A76 /* LockerUI+ChangePassword.swift in Sources */,
+				19B3A7871BF72BE8001D2A76 /* KeypadView.swift in Sources */,
+				192265241C074742002BB95C /* StatusViewController.swift in Sources */,
+				19B3A79C1BF72CB9001D2A76 /* LockerUI.swift in Sources */,
+				191410031C08587B002D4D69 /* LockerImageView.swift in Sources */,
+				19B3A7811BF72BE8001D2A76 /* FingerprintViewController.swift in Sources */,
+				1977DC6A1D425155009784F0 /* SwapViewsButton.swift in Sources */,
+				01FB1C6D1C0DC55D00B74C0C /* LockerBackgroundView.swift in Sources */,
+				19B3A7A01BF72E2E001D2A76 /* LockerUI+UnlockOrRegister.swift in Sources */,
+				01CD71FD1C084D63006EFA02 /* NumberPadButton.swift in Sources */,
+				19B7A7CB1C0890C300C949D6 /* DisplayInfoViewController.swift in Sources */,
+				19B3A78E1BF72BE8001D2A76 /* WaitViewController.swift in Sources */,
+				19B3A7821BF72BE8001D2A76 /* GestureLockView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19B3A7AC1BF76E98001D2A76 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19B3A7AD1BF76EA2001D2A76 /* cs */,
+				19EAC3D31D073E6C00DE0A62 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1967AB111BDBD849000CA66C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1967AB121BDBD849000CA66C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19B3A76F1BF70A3C001D2A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LockerUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = CSLockerUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		19B3A7701BF70A3C001D2A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LockerUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = CSLockerUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1967AAFC1BDBD849000CA66C /* Build configuration list for PBXProject "CSLockerUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1967AB111BDBD849000CA66C /* Debug */,
+				1967AB121BDBD849000CA66C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B3A7711BF70A3C001D2A76 /* Build configuration list for PBXNativeTarget "CSLockerUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B3A76F1BF70A3C001D2A76 /* Debug */,
+				19B3A7701BF70A3C001D2A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1967AAF91BDBD849000CA66C /* Project object */;
+}

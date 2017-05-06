@@ -1,0 +1,92 @@
+﻿/*
+ Localizable.strings
+ CoreSDKTestApp
+ 
+ Created by Vladimír Nevyhoštěný on 14.11.15.
+ Copyright © 2015 Applifting. All rights reserved.
+ */
+
+"btn-use-pin"                                = "USE PIN";
+"btn-use-fingerprint"                        = "USE FINGERPRINT";
+"btn-use-gesture"                            = "USE GESTURE";
+"btn-without-security"                       = "WITHOUT SECURITY";
+"btn-ok"                                     = "Unregister";
+"btn-cancel"                                 = "Cancel";
+"btn-register"                               = "REGISTER";
+"btn-change-security"                        = "CHANGE SECURITY";
+"btn-unregister"                             = "UNREGISTER";
+"btn-unlock"                                 = "UNLOCK";
+"btn-pad-delete"                             = "DELETE";
+"btn-pad-delete-hint"                        = "Delete last character";
+"btn-pad-back"                               = "BACK";
+"btn-pad-back-hint"                          = "Repeat input";
+"btn-repeat"                                 = "REPEAT";
+"btn-new-registration"                       = "NEW REGISTRATION";
+"btn-swap-views"                             = "Exchange";
+"btn-swap-views-hint"                        = "Exchange of right and left control";
+
+"info-input-unlock-gesture"                  = "Input gesture";
+"info-input-original-unlock-gesture"         = "Input your original gesture";
+
+"info-gesture-trough-format"                 = "Your gesture should go trough at least %d points.";
+"info-gesture-bad-format"                    = "Wrong gesture. Remaining attempts: %d.";
+"info-repeat-gesture"                        = "Repeat gesture";
+"info-repeat-gesture-detail"                 = "";
+"info-second-gesture-not-match"              = "Gestures does not match, try it again.";
+
+"info-input-new-unlock-gesture"              = "Input new gesture";
+
+"info-input-unlock-pin"                      = "Input your PIN";
+"info-input-original-unlock-pin"             = "Input your PIN";
+"info-input-new-unlock-pin"                  = "Input a new PIN";
+"info-input-unlock-pin-format"               = "Wrong PIN. Remaining attempts: %d.";
+"info-pin-trough-format"                     = "Your PIN is not long enough.";
+"info-repeat-pin"                            = "Repeat the new PIN";
+"info-repeat-pin-detail"                     = "";
+"info-second-pin-not-match"                  = "PIN does not match, try it again.";
+
+"info-input-unlock-fingerprint"              = "Input your fingerprint.";
+
+"title-error"                                = "Error";
+"title-unregister"                           = "Unregister?";
+"unregister-prompt-text"                     = "Do you really wish to unregister? Your security settings will be erased and you will need to register again to use the application.";
+
+"info-user-registration"                     = "User registration";
+"info-user-registration-description"         = "You have to be registered to use the application %@. You can choose login type after you enter your client number and password.";
+"info-user-registration-failed"              = "Registration failed";
+"info-user-registration-failed-description"  = "Unfortunatelly, your registration failed. Try it again.";
+
+"info-user-unlock"                           = "User login";
+"info-user-unlock-description"               = "Application %@ is locked. Unlock to continue.";
+"info-user-login-failed"                     = "Login failed";
+"info-user-login-failed-description"         = "Unfortunately, your login was not successful due to the login attempts limit exceeding.";
+"info-user-login-failed-try-later"           = "Unfortunatelly, your login was not successfull. Try it again later, please.";
+"info-fingerprint-auth-failed"               = "Unfortunatelly, it was not possible to verify your identity using your fingerprint.";
+
+"info-security"                              = "Security";
+"info-security-description"                  = "Choose the lock type.";
+
+"info-settings"                              = "Settings";
+"info-settings-description-format"           = "Current login method is %@.";
+
+"info-moment"                                = "Just a moment";
+"info-registration-in-progress"              = "Your registration is in progress, wait please.";
+"info-unregistration-in-progress"            = "Your unregistration is in progress, wait please.";
+"info-unlock-in-progress"                    = "Login in progress, please wait.";
+"info-password-change-in-progress"           = "Login type change in progress, please wait.";
+
+"info-network-connection-error"              = "Network connection error";
+"info-connect-to-internet-and-try-again"     = "Try to connect to the internet and retry.";
+
+"info-different-error"                       = "Unexpected error ocurred";
+"info-retry-later"                           = "Retry later, please";
+
+// VoiceOver
+
+"btn-cancel-hint"                                   = "Cancel activity";
+"btn-back"                                          = "Back";
+"btn-back-hint"                                     = "Back to previous screen";
+"btn-delete"                                        = "Delete";
+"btn-delete-hint"                                   = "Delete last character";
+"fmt-gesture"                                       = "Column %d Row %d";
+

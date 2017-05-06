@@ -1,0 +1,93 @@
+﻿/* 
+  Localizable.strings
+  CoreSDKTestApp
+
+  Created by Vladimír Nevyhoštěný on 14.11.15.
+  Copyright © 2015 Applifting. All rights reserved.
+*/
+
+"btn-use-pin"                                = "POUŽÍT PIN";
+"btn-use-fingerprint"                        = "POUŽÍT OTISK PRSTU";
+"btn-use-gesture"                            = "POUŽÍT GESTO";
+"btn-without-security"                       = "BEZ ZABEZPEČENÍ";
+"btn-ok"                                     = "Zrušit registraci";
+"btn-cancel"                                 = "Zpět";
+"btn-register"                               = "REGISTROVAT";
+"btn-change-security"                        = "ZMĚNIT ZABEZPEČENÍ";
+"btn-unregister"                             = "ZRUŠIT REGISTRACI";
+"btn-unlock"                                 = "PŘIHLÁSIT SE";
+"btn-pad-delete"                             = "SMAZAT";
+"btn-pad-delete-hint"                        = "Smazat poslední znak";
+"btn-pad-back"                               = "ZPĚT";
+"btn-pad-back-hint"                          = "Opakovat zadání";
+"btn-repeat"                                 = "OPAKOVAT";
+"btn-new-registration"                       = "NOVÁ REGISTRACE";
+"btn-swap-views"                             = "Záměna";
+"btn-swap-views-hint"                        = "Záměna ovládání pravou nebo levou rukou";
+
+"info-input-unlock-gesture"                  = "Zadejte gesto";
+"info-input-original-unlock-gesture"         = "Zadejte původní gesto";
+
+"info-gesture-trough-format"                 = "Minimální počet bodů je %d.";
+"info-gesture-bad-format"                    = "Špatné gesto. Počet zbývajících pokusů: %d";
+"info-repeat-gesture"                        = "Zopakujte gesto";
+"info-repeat-gesture-detail"                 = "";
+"info-second-gesture-not-match"              = "Gesta se neshodují. Zadejte nové gesto.";
+
+"info-input-new-unlock-gesture"              = "Zadejte nové gesto pro odemknutí.";
+
+"info-input-unlock-pin"                      = "Zadejte PIN";
+"info-input-original-unlock-pin"             = "Zadejte PIN";
+"info-input-new-unlock-pin"                  = "Nový PIN";
+"info-input-unlock-pin-format"               = "Chybný PIN. Počet zbývajících pokusů: %d.";
+"info-pin-trough-format"                     = "Váš PIN není dostatečně dlouhý.";
+"info-repeat-pin"                            = "Zopakujte PIN";
+"info-repeat-pin-detail"                     = "";
+"info-second-pin-not-match"                  = "PIN se neshoduje, opakujte zadání.";
+
+"info-input-unlock-fingerprint"              = "Použijte otisk prstu pro odemknutí.";
+
+"title-error"                                = "Chyba";
+"title-unregister"                           = "Zrušit Registraci?";
+"unregister-prompt-text"                     = "Opravdu si přejete zrušit registraci? Nastavení aplikace se po zrušení registrace smaže. Před dalším použitím bude nutné se znovu zaregistrovat.";
+
+"info-user-registration"                     = "Registrace uživatele";
+"info-user-registration-description"         = "Pro využívání aplikace %@ je nutné se zaregistrovat. Po zadání klientského čísla a hesla si můžete zvolit typ přihlašování.";
+"info-user-registration-failed"              = "Registrace selhala";
+"info-user-registration-failed-description"  = "Bohužel nebylo možné Vaší registraci dokončit. Zkuste to prosím znovu.";
+
+"info-user-unlock"                           = "Přihlášení uživatele";
+"info-user-unlock-description"               = "Aplikace %@ je uzamčena. Pro pokračování se přihlašte.";
+"info-user-login-failed"                     = "Přihlášení selhalo";
+"info-user-login-failed-description"         = "Byl překročen limit pokusu o přihlášení. Z bezpečnostních důvodů byla Vaše registrace zrušena.";
+"info-user-login-failed-try-later"           = "Bohužel Vaše přihlášení selhalo. Prosím, zkuste to znovu později.";
+"info-fingerprint-auth-failed"               = "Bohužel nebylo možné ověřit Vaši identitu pomocí otisku prstu.";
+
+"info-security"                              = "Zabezpečení";
+"info-security-description"                  = "Nyní si můžete zvolit typ zabezpečení pro přihlašování do této aplikace.";
+
+"info-settings"                              = "Nastavení";
+"info-settings-description-format"           = "Aktuální metoda přihlašování je %@.";
+
+"info-moment"                                = "Moment";
+"info-registration-in-progress"              = "Vaše registrace se právě zpracovává, prosím vyčkejte.";
+"info-unregistration-in-progress"            = "Probíhá Vaše deregistrace, prosím vyčkejte.";
+"info-unlock-in-progress"                    = "Probíhá přihlašování, prosím vyčkejte.";
+"info-password-change-in-progress"           = "Probíhá změna typu přihlašování, prosím vyčkejte.";
+
+"info-network-connection-error"              = "Problém s připojením k internetu";
+"info-connect-to-internet-and-try-again"     = "Pokuste se připojit k internetu a akci opakujte.";
+
+"info-different-error"                       = "Vyskytla se neočekávaná chyba";
+"info-retry-later"                           = "Prosím, opakujte akci později.";
+
+// VoiceOver
+
+"btn-cancel-hint"                                   = "Storno aktivity";
+"btn-back"                                          = "Zpět";
+"btn-back-hint"                                     = "Zpátky na předchozí obrazovku";
+"btn-delete"                                        = "Smazat";
+"btn-delete-hint"                                   = "Smazat poslední znak";
+"fmt-gesture"                                       = "Sloupec %d Řádek %d";
+
+
