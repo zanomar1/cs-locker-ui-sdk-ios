@@ -36,7 +36,7 @@ Where options specifies `AuthFlowOptions` object used for customization of regis
 To customize behavior of LockerUI auth flow, you need to create a new instance of `AuthFlowOptions` with desired settings:
 
 ```swift
-let authFlowOptions = AuthFlowOptions( skipStatusScreen: SkipStatusScreen.Always,
+let authFlowOptions = AuthFlowOptions( skipStatusScreen: .always,
                                      registrationScreenText: "This text is displayed on registration screen",
                                            lockedScreenText: "This text is displayed on locked screen" )
 ```
