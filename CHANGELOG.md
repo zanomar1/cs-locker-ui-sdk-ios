@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.0.1] - 2017-06-28
+
 ### Added
 
 - Customized navigation bar color and ting
