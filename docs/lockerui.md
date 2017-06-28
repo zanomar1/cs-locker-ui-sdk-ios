@@ -92,9 +92,11 @@ To customize the visuals of LockerUI, you need to create a new instance of `Lock
 ```swift
 var options = LockerUIOptions()
     options.appName = "My Awesome App"
-    options.allowedLockTypes =     [LockInfo(lockType: LockType.PinLock ), LockInfo(lockType: LockType.GestureLock), LockInfo(lockType: LockType.FingerprintLock), LockInfo(lockType: LockType.NoLock)]
+    options.allowedLockTypes = [LockInfo(lockType: LockType.PinLock ), LockInfo(lockType: LockType.GestureLock), LockInfo(lockType: LockType.FingerprintLock), LockInfo(lockType: LockType.NoLock)]
     options.backgroundImage = UIImage(named: "myAwesomeBackground")
     options.customTint = UIColor.magentaColor()
+    options.navBarColor = .default
+    options.navBarTintColor = .default
     LockerUI.sharedInstance.useLockerUIOptions(options)
 ```
 
@@ -104,7 +106,7 @@ Amongst the things you can customize are:
 - Allowed lock types
 - Background image
 - Custom color tint
-- Color of the navbar
+- Custom or predefined color and tint of the navbar
 - Whether to show CSAS logo or not
 
 ## Supporting landscape on iPhone

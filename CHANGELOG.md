@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Added
+
+- Customized navigation bar color and ting
+- Loading indicator in OAuth flow
+
+### Fixed
+
+- Readme for skip status screen
+
 ## [1.0.0] - 2017-05-06
 
 - Public release
