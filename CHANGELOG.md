@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.0.2] - 2017-07-03
+
 ### Fixed 
 
 - AuthFlowOptions are no longer ignored in startAuthenticationFlow( options:, completion:)
