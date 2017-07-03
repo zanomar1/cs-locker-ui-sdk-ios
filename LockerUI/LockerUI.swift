@@ -339,7 +339,7 @@ public class LockerUI: NSObject, LockerUIApi
     //--------------------------------------------------------------------------
     public func startAuthenticationFlow( options authFlowOptions: AuthFlowOptions?, completion: @escaping ( ( _ status: LockerStatus ) -> () ) )
     {
-        self.startAuthenticationFlow(animated: true, options: nil, completion: completion)
+        self.startAuthenticationFlow(animated: true, options: authFlowOptions, completion: completion)
     }
     
     //--------------------------------------------------------------------------
