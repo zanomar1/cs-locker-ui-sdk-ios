@@ -163,6 +163,10 @@ class WebViewController: LockerViewController {
     //--------------------------------------------------------------------------
     func stopAnimating()
     {
+        guard activityIndicator != nil else {
+            return
+        }
+        
         self.activityIndicator.stopAnimating()
         UIView.animate(withDuration: 0.5,
                        animations: { self.overlayView.alpha = 0.2 },

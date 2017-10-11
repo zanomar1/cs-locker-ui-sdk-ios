@@ -212,7 +212,7 @@ public class LockerUI: NSObject, LockerUIApi
     public var canUseTouchID: Bool {
         var error: NSError? = nil
         let result = LAContext().canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error )
-        
+  
         return result && error == nil
     }
     
@@ -665,6 +665,7 @@ public class LockerUI: NSObject, LockerUIApi
                     assert( false, "Gesture length must be set in interval 3..5" )
                 }
             case .fingerprintLock:
+
                 if !self.canUseTouchID {
                     removeIndex = i
                 }
