@@ -1,4 +1,4 @@
-﻿/*
+/*
  Localizable.strings
  CoreSDKTestApp
  
@@ -46,6 +46,7 @@
 "info-second-pin-not-match"                  = "PIN does not match, try it again.";
 
 "info-input-unlock-fingerprint"              = "Input your fingerprint.";
+"info-input-unlock-faceID"                   = "Look at you for phone.";
 
 "title-error"                                = "Error";
 "title-unregister"                           = "Unregister?";

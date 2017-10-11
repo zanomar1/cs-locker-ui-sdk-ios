@@ -1,4 +1,4 @@
-﻿/* 
+/* 
   Localizable.strings
   CoreSDKTestApp
 
@@ -46,6 +46,7 @@
 "info-second-pin-not-match"                  = "PIN se neshoduje, opakujte zadání.";
 
 "info-input-unlock-fingerprint"              = "Použijte otisk prstu pro odemknutí.";
+"info-input-unlock-faceID"                   = "Použijte vaši tvář pro odemknutí.";
 
 "title-error"                                = "Chyba";
 "title-unregister"                           = "Zrušit Registraci?";

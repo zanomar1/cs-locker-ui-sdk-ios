@@ -11,29 +11,41 @@ import Security
 import LocalAuthentication
 import CSCoreSDK
 
-//==============================================================================
-class FingerprintViewController: LockerPasswordViewController
-{
+enum biometricType {
+    case touchID
+    case faceID
+}
+
+class FingerprintViewController: LockerPasswordViewController {
+    
     @IBOutlet weak var statusIcon: LockerImageView!
     
     var forceAskForTouch: Bool!
     var prompt: String?
+    let context = LAContext()
 
-
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         self.forceAskForTouch = true
-        self.prompt = LockerUI.localized( "info-input-unlock-fingerprint" )
-        self.statusIcon.image = self.imageNamed("icons-finger-ok")
+        
+        let biometricType = deviceUsedBiometricType()
+        switch biometricType {
+        case .faceID:
+            self.statusIcon.image = self.imageNamed("icons-face-ok")
+            self.prompt = LockerUI.localized("info-input-unlock-faceID")
+        case .touchID:
+            self.prompt = LockerUI.localized("info-input-unlock-fingerprint")
+            self.statusIcon.image = self.imageNamed("icons-finger-ok")
+        }
+        
         if let tint = self.backgroundTint {
             self.statusIcon.tint = tint
         }
     }
     
-    override func viewDidAppear(_ animated: Bool)
-    {
+    override func viewDidAppear(_ animated: Bool) {
+        
         super.viewDidAppear( animated )
         self.updateConstraintsWithScreenSize(self.view.frame.size, sizeIncludesNavigationBar: true)
         if self.forceAskForTouch! {
@@ -43,18 +55,16 @@ class FingerprintViewController: LockerPasswordViewController
         }
     }
     
-    //--------------------------------------------------------------------------
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
-    {
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        
         coordinator.animate(alongsideTransition: { _ in
             self.updateConstraintsWithScreenSize(self.view.frame.size, sizeIncludesNavigationBar: false)
             }, completion: nil)
     }
     
-    //--------------------------------------------------------------------------
-    func updateConstraintsWithScreenSize( _ screenSize: CGSize, sizeIncludesNavigationBar: Bool )
-    {
+    func updateConstraintsWithScreenSize( _ screenSize: CGSize, sizeIncludesNavigationBar: Bool ) {
+        
         let isLandscape = UIDevice.current.isLandscape
         
         if ( self.shouldShowTitleLogo ) {
@@ -67,10 +77,22 @@ class FingerprintViewController: LockerPasswordViewController
         }
     }
     
-    //MARK: -
-    func askUserForTouchIdWithPrompt( _ prompt: String )
-    {
-        let context = LAContext()
+    func deviceUsedBiometricType() -> biometricType {
+        
+        if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            if #available(iOS 11.0, *) {
+                
+                if context.biometryType == LABiometryType.typeFaceID {
+                    return .faceID
+                }
+            }
+        }
+        
+        return .touchID
+    }
+    
+    func askUserForTouchIdWithPrompt( _ prompt: String ) {
+
         var error: NSError? = nil
         
         if !context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error ) {
@@ -88,7 +110,7 @@ class FingerprintViewController: LockerPasswordViewController
                 clog(LockerUI.ModuleName, activityName: LockerUIActivities.TouchID.rawValue, fileName: #file, functionName: #function, lineNumber: #line, logLevel: LogLevel.debug, format: "TouchID authentication succeded." )
                 if #available(iOS 9.0, *) {
                     // TouchID hash is not saved here. It's more safe.
-                    if let domainState = context.evaluatedPolicyDomainState {
+                    if let domainState = self.context.evaluatedPolicyDomainState {
                         if let unlockHash = String( data: domainState, encoding: String.Encoding.ascii ) {
                             self.completion!( LockerUIDialogResult.success(unlockHash as AnyObject))
                         }

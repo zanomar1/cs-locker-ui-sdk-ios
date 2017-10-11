@@ -209,7 +209,7 @@ public class LockerUI: NSObject, LockerUIApi
         return CoreSDK.sharedInstance.locker
     }
     
-    public var canUseTouchID: Bool {
+    public var canUseBiometrics: Bool {
         var error: NSError? = nil
         let result = LAContext().canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error )
   
@@ -666,7 +666,7 @@ public class LockerUI: NSObject, LockerUIApi
                 }
             case .fingerprintLock:
 
-                if !self.canUseTouchID {
+                if !self.canUseBiometrics {
                     removeIndex = i
                 }
             default:
