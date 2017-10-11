@@ -11,10 +11,6 @@ import Security
 import LocalAuthentication
 import CSCoreSDK
 
-enum biometricType {
-    case touchID
-    case faceID
-}
 
 class FingerprintViewController: LockerPasswordViewController {
     
@@ -23,13 +19,14 @@ class FingerprintViewController: LockerPasswordViewController {
     var forceAskForTouch: Bool!
     var prompt: String?
     let context = LAContext()
-
+    let biometricTypeManager = BiometricsTypeManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.forceAskForTouch = true
         
-        let biometricType = deviceUsedBiometricType()
+        let biometricType = biometricTypeManager.deviceUsedBiometricType()
         switch biometricType {
         case .faceID:
             self.statusIcon.image = self.imageNamed("icons-face-ok")
@@ -76,21 +73,7 @@ class FingerprintViewController: LockerPasswordViewController {
             }
         }
     }
-    
-    func deviceUsedBiometricType() -> biometricType {
-        
-        if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            if #available(iOS 11.0, *) {
-                
-                if context.biometryType == LABiometryType.typeFaceID {
-                    return .faceID
-                }
-            }
-        }
-        
-        return .touchID
-    }
-    
+
     func askUserForTouchIdWithPrompt( _ prompt: String ) {
 
         var error: NSError? = nil

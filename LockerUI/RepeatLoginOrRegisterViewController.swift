@@ -36,17 +36,25 @@ class RepeatLoginOrRegisterViewController: LockerViewController
     @IBOutlet weak var newRegistrationButtonTrailingConstraint: NSLayoutConstraint!
     
     var lockType = LockType.noLock
+    let biometricsTypeManager = BiometricsTypeManager.shared
     
     var secondCompletion: ((_ result: LockerUIDialogResult<AnyObject>) -> Void)?
     var options: DisplayInfoOptions?
     
     //--------------------------------------------------------------------------
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.infoMainLabel.text        = LockerUI.localized( "info-user-login-failed" )
-        self.infoDescriptionLabel.text = LockerUI.localized( "info-fingerprint-auth-failed" )
+        let type = biometricsTypeManager.deviceUsedBiometricType()
+        switch type {
+        case .touchID:
+            self.infoDescriptionLabel.text = LockerUI.localized("info-fingerprint-auth-failed")
+            statusIcon.image = imageNamed("icons-finger-broken")
+        case .faceID:
+            self.infoDescriptionLabel.text = LockerUI.localized("info-face-auth-failed")
+            statusIcon.image = imageNamed("icons-face-broken")
+        }
+        self.infoMainLabel.text        = LockerUI.localized("info-user-login-failed")
         
         self.firstActionButton.setTitle( LockerUI.localized("btn-repeat"), for: UIControlState() )
         self.secondActionButton.setTitle( LockerUI.localized("btn-new-registration"), for: UIControlState() )
