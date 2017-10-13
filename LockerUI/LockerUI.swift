@@ -195,8 +195,10 @@ public class LockerUI: NSObject, LockerUIApi
             self._lockerUIOptions = self.validateLockerUIOptions( newValue )
             if let tint = self._lockerUIOptions?.customTint {
                 var hue = CGFloat(0)
-                var trash = CGFloat(0)
-                tint.getHue(&hue, saturation: &trash, brightness: &trash, alpha: &trash)
+                var saturation = CGFloat(0)
+                var brightness = CGFloat(0)
+                var alpha = CGFloat(0)
+                tint.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
                 self.mainColor = UIColor(hue: hue, saturation: 0.87, brightness: 0.57, alpha: 1)
             }
             if self._lockerUIOptions?.backgroundImage == nil{
