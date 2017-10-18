@@ -80,7 +80,7 @@ class FingerprintViewController: LockerPasswordViewController {
         
         if !context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error ) {
             let touchIdError = LockerError.errorOfKind( .touchIDNotAvailable, underlyingError: error)
-            clog(LockerUI.ModuleName, activityName: LockerUIActivities.TouchID.rawValue, fileName: #file, functionName: #function, lineNumber: #line, logLevel: LogLevel.error, format: "Error while asking for TouchID: \(touchIdError)" )
+            clog(LockerUI.ModuleName, activityName: LockerUIActivities.TouchID.rawValue, fileName: #file, functionName: #function, lineNumber: #line, logLevel: LogLevel.error, format: "Error while asking for BiometricID : \(touchIdError)" )
             self.completion!( LockerUIDialogResult.failure(touchIdError) )
             return
         }
@@ -90,7 +90,7 @@ class FingerprintViewController: LockerPasswordViewController {
                                 localizedReason:prompt,
                                 reply:{( success: Bool, error: Error? ) in
             if success {
-                clog(LockerUI.ModuleName, activityName: LockerUIActivities.TouchID.rawValue, fileName: #file, functionName: #function, lineNumber: #line, logLevel: LogLevel.debug, format: "TouchID authentication succeded." )
+                clog(LockerUI.ModuleName, activityName: LockerUIActivities.TouchID.rawValue, fileName: #file, functionName: #function, lineNumber: #line, logLevel: LogLevel.debug, format: "BiometricID  authentication succeded." )
                 if #available(iOS 9.0, *) {
                     // TouchID hash is not saved here. It's more safe.
                     if let domainState = self.context.evaluatedPolicyDomainState {
