@@ -666,7 +666,7 @@ public class LockerUI: NSObject, LockerUIApi
                 if lockTypeItem.length < 3 || lockTypeItem.length > 5 {
                     assert( false, "Gesture length must be set in interval 3..5" )
                 }
-            case .fingerprintLock:
+            case .biometricLock:
 
                 if !self.canUseBiometrics {
                     removeIndex = i
@@ -886,7 +886,7 @@ public class LockerUI: NSObject, LockerUIApi
                             })
                         })
                     case LockerErrorKind.loginCanceled.rawValue:
-                        if ( lockType == .fingerprintLock ) {
+                        if ( lockType == .biometricLock ) {
                             self.showStatusScreenWithNewLoginAttemptOrNewRegistrationWithCompletion( completion )
                         }
                         else {

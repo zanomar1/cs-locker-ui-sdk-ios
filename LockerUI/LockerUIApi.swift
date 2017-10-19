@@ -238,7 +238,7 @@ public struct LockerUIOptions
         }
         self.allowedLockTypes = [LockInfo(lockType:LockType.pinLock),
                                  LockInfo(lockType:LockType.gestureLock),
-                                 LockInfo(lockType:LockType.fingerprintLock),
+                                 LockInfo(lockType:LockType.biometricLock),
                                  LockInfo(lockType:LockType.noLock)]
     }
 }
