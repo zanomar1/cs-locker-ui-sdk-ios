@@ -62,7 +62,7 @@ extension LockerUI
         switch lockType {
         case .pinLock:
             return self.viewControllerWithName( LockerUI.PinInputSceneName ) as! PinViewController
-        case .fingerprintLock:
+        case .biometricLock:
             return self.viewControllerWithName( LockerUI.FingerprintInputSceneName ) as! FingerprintViewController
         case .gestureLock:
             return self.viewControllerWithName( LockerUI.GestureInputSceneName ) as! GestureViewController
