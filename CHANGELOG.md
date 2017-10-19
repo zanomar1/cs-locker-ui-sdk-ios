@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.0.0] - 2017-10-19
+
 ## Added
 - Support for FaceID (generally Biometrics)
 
