@@ -5,7 +5,7 @@
 # Features
 
 - [x] **User interface for [Locker](https://github.com/Ceskasporitelna/cs-core-sdk-ios/blob/master/docs/locker.md)** - Provide your users with secure & simple authentication interface
-- [x] **Various LockTypes** - User access token can be sceured by Gesture, PIN, Fingerprint or nothing at all.
+- [x] **Various LockTypes** - User access token can be sceured by Gesture, PIN, Biometric or nothing at all.
 - [x] **Customizable UI flow** - Skippable status screens
 - [x] **Customizable texts, colors and background** - Set various elements in the UI.
 

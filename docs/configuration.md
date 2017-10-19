@@ -56,7 +56,7 @@ You can customize locker by using the `LockerUI.sharedInstance.useLockerUIOption
 There are several lock types that could be used to secure user access token:
 
 - `PinLock` - User is verified by pin. Developer can set exact length that is required. It has to be between 4 and 8 digits long.
-- `FingerprintLock` - User is verified by his/her fingerprint. This option is automatically disabled for devices that do not support fingerprint verification.
+- `BiometricLock` - User is verified by his/her biometric. This option is automatically disabled for devices that do not support biometric verification.
 - `GestureLock` - User is verified by gesture on a grid. The length of the gesture can be set by developer. The minimal length of the gesture must be at least 4 points long.
 - `NoLock` - User is not verified when the access token is retrieved from the server
 

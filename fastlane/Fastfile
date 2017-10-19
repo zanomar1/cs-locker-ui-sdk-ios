@@ -63,7 +63,9 @@ platform :ios do
   end
 
   lane :pod_lint do
-    pod_lib_lint(sources: ["https://github.com/Ceskasporitelna/cocoa-pods-specs"], allow_warnings: true)
+    # if pod lint fails, it is also possible to allow warnings
+    # pod_lib_lint(sources: ["https://github.com/Ceskasporitelna/cocoa-pods-specs"], allow_warnings: true)
+    pod_lib_lint(sources: ["https://github.com/Ceskasporitelna/cocoa-pods-specs"])
   end
 
 
