@@ -61,8 +61,8 @@ internal enum LockerUIActivities: String {
 
 
 //==============================================================================
-public class LockerUI: NSObject, LockerUIApi
-{
+@objc public class LockerUI: NSObject, LockerUIApi {
+    
     public static let BundleIdentifier                  = "CSLockerUI"
     public static let StoryboardName                    = "Locker"
     internal static let ModuleName                      = "LockerUI"
@@ -151,19 +151,21 @@ public class LockerUI: NSObject, LockerUIApi
         return localized
     }
     
-    public class var sharedInstance: LockerUIApi {
-        if let instance = _sharedInstance{
+    fileprivate static var _sharedInstance : LockerUI?
+    
+    // sharedInstance doesnt need to conform to protocol LockerUIApi and since it cannot be represented in obj-C it has been changed to LockerUI class.
+    @objc public class var sharedInstance: LockerUI {
+        if let instance = _sharedInstance {
             return instance
-        }else{
+        } else {
             let instance = LockerUI()
             _sharedInstance = instance
             return instance
         }
     }
-    fileprivate static var _sharedInstance : LockerUI?
     
-    internal class var internalSharedInstance : LockerUI{
-        return sharedInstance as! LockerUI
+    internal class var internalSharedInstance : LockerUI {
+        return sharedInstance
     }
     
     public var authFlowOptions: AuthFlowOptions {
@@ -207,7 +209,7 @@ public class LockerUI: NSObject, LockerUIApi
         }
     }
     
-    public var locker: LockerAPI {
+   public var locker: LockerAPI {
         return CoreSDK.sharedInstance.locker
     }
     
