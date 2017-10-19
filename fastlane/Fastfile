@@ -63,7 +63,7 @@ platform :ios do
   end
 
   lane :pod_lint do
-    pod_lib_lint(sources: ["https://github.com/Ceskasporitelna/cocoa-pods-specs"])
+    pod_lib_lint(sources: ["https://github.com/Ceskasporitelna/cocoa-pods-specs"], allow_warnings: true)
   end
 
 

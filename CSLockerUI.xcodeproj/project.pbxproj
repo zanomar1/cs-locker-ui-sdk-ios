@@ -48,6 +48,7 @@
 		502BB1A21C4CF3BA00EFA324 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BB1A11C4CF3BA00EFA324 /* WebViewController.swift */; };
 		506DB08C1CBBA3DE00B45430 /* WebSessionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506DB08B1CBBA3DE00B45430 /* WebSessionTimer.swift */; };
 		5073CF911C806F7B007A0FCD /* LockerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5073CF901C806F7B007A0FCD /* LockerNavigationController.swift */; };
+		902A32C61F8E1C4F00E078D7 /* BiometricsTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902A32C51F8E1C4F00E078D7 /* BiometricsTypeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		502BB1A11C4CF3BA00EFA324 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		506DB08B1CBBA3DE00B45430 /* WebSessionTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSessionTimer.swift; sourceTree = "<group>"; };
 		5073CF901C806F7B007A0FCD /* LockerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerNavigationController.swift; sourceTree = "<group>"; };
+		902A32C51F8E1C4F00E078D7 /* BiometricsTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricsTypeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			children = (
 				19B3A7981BF72C76001D2A76 /* UIUtils.swift */,
 				506DB08B1CBBA3DE00B45430 /* WebSessionTimer.swift */,
+				902A32C51F8E1C4F00E078D7 /* BiometricsTypeManager.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -278,7 +281,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Applifting;
 				TargetAttributes = {
 					19B3A7651BF70A3B001D2A76 = {
@@ -351,6 +354,7 @@
 				19B3A7991BF72C76001D2A76 /* RoundedButtonView.swift in Sources */,
 				01CD72011C0858DB006EFA02 /* TextPadButton.swift in Sources */,
 				01CD71FF1C085713006EFA02 /* NumberPadButtonZero.swift in Sources */,
+				902A32C61F8E1C4F00E078D7 /* BiometricsTypeManager.swift in Sources */,
 				19B3A7831BF72BE8001D2A76 /* GestureViewController.swift in Sources */,
 				19B3A7951BF72C45001D2A76 /* LockerViewController.swift in Sources */,
 				190BDFD61C0F739700A12A58 /* LockerUIBaseViewController.swift in Sources */,
@@ -403,14 +407,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -452,14 +462,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

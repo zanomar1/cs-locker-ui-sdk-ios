@@ -1,4 +1,4 @@
-﻿/* 
+/* 
   Localizable.strings
   CoreSDKTestApp
 
@@ -8,6 +8,7 @@
 
 "btn-use-pin"                                = "POUŽÍT PIN";
 "btn-use-fingerprint"                        = "POUŽÍT OTISK PRSTU";
+"btn-use-faceID"                             = "POUŽÍT FACE ID";
 "btn-use-gesture"                            = "POUŽÍT GESTO";
 "btn-without-security"                       = "BEZ ZABEZPEČENÍ";
 "btn-ok"                                     = "Zrušit registraci";
@@ -45,7 +46,8 @@
 "info-repeat-pin-detail"                     = "";
 "info-second-pin-not-match"                  = "PIN se neshoduje, opakujte zadání.";
 
-"info-input-unlock-fingerprint"              = "Použijte otisk prstu pro odemknutí.";
+"info-input-unlock-fingerprint"              = "Pro odemknutí použijte svůj otisk prstu.";
+"info-input-unlock-faceID"                   = "Pro odemknutí použijte svoji tvář.";
 
 "title-error"                                = "Chyba";
 "title-unregister"                           = "Zrušit Registraci?";
@@ -62,6 +64,7 @@
 "info-user-login-failed-description"         = "Byl překročen limit pokusu o přihlášení. Z bezpečnostních důvodů byla Vaše registrace zrušena.";
 "info-user-login-failed-try-later"           = "Bohužel Vaše přihlášení selhalo. Prosím, zkuste to znovu později.";
 "info-fingerprint-auth-failed"               = "Bohužel nebylo možné ověřit Vaši identitu pomocí otisku prstu.";
+"info-face-auth-failed"                      = "Bohužel nebylo možné ověřit Vaši identitu pomocí vašeho obličeje.";
 
 "info-security"                              = "Zabezpečení";
 "info-security-description"                  = "Nyní si můžete zvolit typ zabezpečení pro přihlašování do této aplikace.";

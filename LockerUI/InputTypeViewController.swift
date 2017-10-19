@@ -47,6 +47,7 @@ class InputTypeViewController: LockerViewController
     @IBOutlet weak var buttonBaseView: UIView!
     
     var lockerUIOptions: LockerUIOptions = LockerUIOptions()
+    let biometricsTypeManager = BiometricsTypeManager.shared
     
     var buttonHeight: CGFloat = 42.0
     var buttonGap: CGFloat    = 15.0
@@ -61,18 +62,27 @@ class InputTypeViewController: LockerViewController
     }
     
     //--------------------------------------------------------------------------
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         self.statusMainLabel.text = LockerUI.localized( "info-security" )
         self.statusDescriptionLabel.text = LockerUI.localized( "info-security-description" )
-        
         self.pinButton.setTitle(LockerUI.localized( "btn-use-pin"), for: UIControlState())
-        self.fingerprintButton.setTitle(LockerUI.localized( "btn-use-fingerprint"), for: UIControlState())
         self.gestureButton.setTitle( LockerUI.localized( "btn-use-gesture"), for: UIControlState())
         self.noAuthButton.setTitle(LockerUI.localized( "btn-without-security"), for: UIControlState())
         self.statusIcon.image = self.imageNamed("lock-ok")
+        
+        let type = biometricsTypeManager.deviceUsedBiometricType()
+        switch type {
+        case .touchID:
+            self.fingerprintButton.setImage(imageNamed("button-fingerprint"), for: UIControlState())
+            self.fingerprintButton.setTitle(LockerUI.localized( "btn-use-fingerprint"), for: UIControlState())
+            
+        case .faceID:
+            self.fingerprintButton.setImage(imageNamed("button-face"), for: UIControlState())
+            self.fingerprintButton.setTitle(LockerUI.localized( "btn-use-faceID"), for: UIControlState())
+        }
         
         var offset: CGFloat = 0.0
         
@@ -92,7 +102,6 @@ class InputTypeViewController: LockerViewController
                 self.setupButton( self.pinButton, visible: true, offset: &offset )
                 
             case .fingerprintLock:
-                self.fingerprintButton.setImage(self.imageNamed("button-fingerprint"), for: UIControlState())
                 self.setupButton( self.fingerprintButton, visible: true, offset: &offset )
                 
             case .gestureLock:
@@ -219,9 +228,7 @@ class InputTypeViewController: LockerViewController
         }
     }
     
-    
-    
-    //MARK: -
+    //MARK: Navigation
     @IBAction func goBackToMenu(_ segue:UIStoryboardSegue){}
     
     @IBAction func buttonTouchAction( _ sender: UIButton )

@@ -1,4 +1,4 @@
-﻿/*
+/*
  Localizable.strings
  CoreSDKTestApp
  
@@ -8,6 +8,7 @@
 
 "btn-use-pin"                                = "USE PIN";
 "btn-use-fingerprint"                        = "USE FINGERPRINT";
+"btn-use-faceID"                             = "USE FACE ID";
 "btn-use-gesture"                            = "USE GESTURE";
 "btn-without-security"                       = "WITHOUT SECURITY";
 "btn-ok"                                     = "Unregister";
@@ -46,6 +47,7 @@
 "info-second-pin-not-match"                  = "PIN does not match, try it again.";
 
 "info-input-unlock-fingerprint"              = "Input your fingerprint.";
+"info-input-unlock-faceID"                   = "Look at you for phone.";
 
 "title-error"                                = "Error";
 "title-unregister"                           = "Unregister?";
@@ -62,6 +64,7 @@
 "info-user-login-failed-description"         = "Unfortunately, your login was not successful due to the login attempts limit exceeding.";
 "info-user-login-failed-try-later"           = "Unfortunatelly, your login was not successfull. Try it again later, please.";
 "info-fingerprint-auth-failed"               = "Unfortunatelly, it was not possible to verify your identity using your fingerprint.";
+"info-face-auth-failed"                      = "Unfortunatelly, it was not possible to verify your identity using your face.";
 
 "info-security"                              = "Security";
 "info-security-description"                  = "Choose the lock type.";

@@ -195,8 +195,10 @@ public class LockerUI: NSObject, LockerUIApi
             self._lockerUIOptions = self.validateLockerUIOptions( newValue )
             if let tint = self._lockerUIOptions?.customTint {
                 var hue = CGFloat(0)
-                var trash = CGFloat(0)
-                tint.getHue(&hue, saturation: &trash, brightness: &trash, alpha: &trash)
+                var saturation = CGFloat(0)
+                var brightness = CGFloat(0)
+                var alpha = CGFloat(0)
+                tint.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
                 self.mainColor = UIColor(hue: hue, saturation: 0.87, brightness: 0.57, alpha: 1)
             }
             if self._lockerUIOptions?.backgroundImage == nil{
@@ -209,10 +211,10 @@ public class LockerUI: NSObject, LockerUIApi
         return CoreSDK.sharedInstance.locker
     }
     
-    public var canUseTouchID: Bool {
+    public var canUseBiometrics: Bool {
         var error: NSError? = nil
         let result = LAContext().canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error )
-        
+  
         return result && error == nil
     }
     
@@ -665,7 +667,8 @@ public class LockerUI: NSObject, LockerUIApi
                     assert( false, "Gesture length must be set in interval 3..5" )
                 }
             case .fingerprintLock:
-                if !self.canUseTouchID {
+
+                if !self.canUseBiometrics {
                     removeIndex = i
                 }
             default:
