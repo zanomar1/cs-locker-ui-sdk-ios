@@ -18,21 +18,31 @@ import CSCoreSDK
 public class LockerUIObjC: NSObject {
     
     public static var sharedInstance = LockerUIObjC()
-    public var authFlowOptions: AuthFlowOptions?
     
-    public func startAuthenticationFlow(_ completion: @escaping () -> Void) {
+    public func startAuthenticationFlow(SkipStatusScreen: SkipStatusScreen, registrationScreenText: String, lockedScreenText: String, completion: @escaping (LockerStatus) -> Void) {
         
-        LockerUI.sharedInstance.startAuthenticationFlow(options: authFlowOptions ?? nil) { status in
+        let options = AuthFlowOptions(skipStatusScreen: SkipStatusScreen,
+                                      registrationScreenText: registrationScreenText,
+                                      lockedScreenText: lockedScreenText)
+        
+        LockerUI.sharedInstance.startAuthenticationFlow(options: options) { status in
             
-            completion()
+            completion(status)
+        }
+    }
+    
+    public func startAuthenticationFlow(_ completion: @escaping (LockerStatus) -> Void) {
+        
+        LockerUI.sharedInstance.startAuthenticationFlow(options: nil) { status in
+            
+            completion(status)
         }
     }
     
     public func setAuthFlowOptions(SkipStatusScreen: SkipStatusScreen, registrationScreenText: String, lockedScreenText: String) {
-
-        self.authFlowOptions = AuthFlowOptions(skipStatusScreen: SkipStatusScreen,
-                                      registrationScreenText: registrationScreenText,
-                                      lockedScreenText: lockedScreenText)
+        LockerUI.sharedInstance.authFlowOptions = AuthFlowOptions(skipStatusScreen: SkipStatusScreen,
+                                                                  registrationScreenText: registrationScreenText,
+                                                                  lockedScreenText: lockedScreenText)
     }
     
     public func lockUser() {
