@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [3.0.1] - 2017-11-29
+
 ## Fixed
 - XCode New Build System compatibility
 
