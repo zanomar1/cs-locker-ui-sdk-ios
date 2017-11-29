@@ -46,8 +46,8 @@
 "info-repeat-pin-detail"                     = "";
 "info-second-pin-not-match"                  = "PIN se neshoduje, opakujte zadání.";
 
-"info-input-unlock-fingerprint"              = "Použijte otisk prstu pro odemknutí.";
-"info-input-unlock-faceID"                   = "Použijte vaši tvář pro odemknutí.";
+"info-input-unlock-fingerprint"              = "Pro odemknutí použijte svůj otisk prstu.";
+"info-input-unlock-faceID"                   = "Pro odemknutí použijte svoji tvář.";
 
 "title-error"                                = "Chyba";
 "title-unregister"                           = "Zrušit Registraci?";

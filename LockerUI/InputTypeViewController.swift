@@ -101,7 +101,7 @@ class InputTypeViewController: LockerViewController
                 self.pinButton.setImage(self.imageNamed("button-dots"), for: UIControlState())
                 self.setupButton( self.pinButton, visible: true, offset: &offset )
                 
-            case .fingerprintLock:
+            case .biometricLock:
                 self.setupButton( self.fingerprintButton, visible: true, offset: &offset )
                 
             case .gestureLock:

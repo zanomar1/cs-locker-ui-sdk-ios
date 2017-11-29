@@ -61,8 +61,8 @@ internal enum LockerUIActivities: String {
 
 
 //==============================================================================
-@objc public class LockerUI: NSObject, LockerUIApi {
-    
+public class LockerUI: NSObject, LockerUIApi
+{
     public static let BundleIdentifier                  = "CSLockerUI"
     public static let StoryboardName                    = "Locker"
     internal static let ModuleName                      = "LockerUI"
@@ -144,28 +144,26 @@ internal enum LockerUIActivities: String {
         }
     }
     
-    
     class func localized( _ string: String ) -> String
     {
         let localized =  NSLocalizedString( string, tableName: nil, bundle: LockerUI.getBundle(), value: "", comment: "")
         return localized
     }
     
-    fileprivate static var _sharedInstance : LockerUI?
-    
-    // sharedInstance doesnt need to conform to protocol LockerUIApi and since it cannot be represented in obj-C it has been changed to LockerUI class.
-    @objc public class var sharedInstance: LockerUI {
-        if let instance = _sharedInstance {
+    public class var sharedInstance: LockerUI {
+        if let instance = _sharedInstance{
             return instance
-        } else {
+        }else{
             let instance = LockerUI()
             _sharedInstance = instance
             return instance
         }
     }
     
-    internal class var internalSharedInstance : LockerUI {
-        return sharedInstance
+    fileprivate static var _sharedInstance : LockerUI?
+    
+    internal class var internalSharedInstance : LockerUI{
+        return sharedInstance as! LockerUI
     }
     
     public var authFlowOptions: AuthFlowOptions {
@@ -209,7 +207,7 @@ internal enum LockerUIActivities: String {
         }
     }
     
-   public var locker: LockerAPI {
+    public var locker: LockerAPI {
         return CoreSDK.sharedInstance.locker
     }
     
@@ -668,7 +666,7 @@ internal enum LockerUIActivities: String {
                 if lockTypeItem.length < 3 || lockTypeItem.length > 5 {
                     assert( false, "Gesture length must be set in interval 3..5" )
                 }
-            case .fingerprintLock:
+            case .biometricLock:
 
                 if !self.canUseBiometrics {
                     removeIndex = i
@@ -888,7 +886,7 @@ internal enum LockerUIActivities: String {
                             })
                         })
                     case LockerErrorKind.loginCanceled.rawValue:
-                        if ( lockType == .fingerprintLock ) {
+                        if ( lockType == .biometricLock ) {
                             self.showStatusScreenWithNewLoginAttemptOrNewRegistrationWithCompletion( completion )
                         }
                         else {

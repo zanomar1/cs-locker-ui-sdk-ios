@@ -145,8 +145,7 @@ public typealias UIUnlockCompletion = (( _ result: LockerUIDialogBoolResult ) ->
     - WhenNotRegistered: Skip the status screen only if the LockerStatus is Unregistered.
     - Never: Never skip the status screen.
 */
-public enum SkipStatusScreen: UInt8
-{
+@objc public enum SkipStatusScreen: UInt8 {
     case always = 0
     case whenLocked = 1
     case whenNotRegistered = 2
@@ -238,7 +237,7 @@ public struct LockerUIOptions
         }
         self.allowedLockTypes = [LockInfo(lockType:LockType.pinLock),
                                  LockInfo(lockType:LockType.gestureLock),
-                                 LockInfo(lockType:LockType.fingerprintLock),
+                                 LockInfo(lockType:LockType.biometricLock),
                                  LockInfo(lockType:LockType.noLock)]
     }
 }
@@ -259,7 +258,6 @@ public enum CSNavBarColor{
             return color
         }
     }
-    
 }
 
 public enum CSNavBarTintColor {

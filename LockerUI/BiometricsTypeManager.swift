@@ -21,15 +21,12 @@ class BiometricsTypeManager {
     
     func deviceUsedBiometricType() -> biometricType {
         
-        if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            if #available(iOS 11.0, *) {
-                
-                if context.biometryType == LABiometryType.typeFaceID {
-                    return .faceID
-                }
+        if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil),
+            #available(iOS 11.0, *),
+            context.biometryType == LABiometryType.typeFaceID {
+
+                return .faceID
             }
-        }
-        
         return .touchID
     }
 }
