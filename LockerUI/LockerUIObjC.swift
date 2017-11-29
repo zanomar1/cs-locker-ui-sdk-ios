@@ -17,8 +17,7 @@ import CSCoreSDK
 
 public class LockerUIObjC: NSObject {
     
-    public static var sharedInstance = LockerUI()
-    public static var locker = sharedInstance.locker
+    public static var sharedInstance = LockerUIObjC()
     public var authFlowOptions: AuthFlowOptions?
     
     public func startAuthenticationFlow(_ completion: @escaping () -> Void) {
